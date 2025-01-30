@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dna1wba0c4bi4"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_qkhu1"]
+[ext_resource type="PackedScene" uid="uid://dwko0i8gbwys4" path="res://bird.tscn" id="2_wk6sg"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_qkhu1")
+
+[node name="Bird" parent="." instance=ExtResource("2_wk6sg")]
+position = Vector2(630, 308)
