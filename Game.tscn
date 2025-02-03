@@ -8,3 +8,9 @@ script = ExtResource("1_qkhu1")
 
 [node name="Bird" parent="." instance=ExtResource("2_wk6sg")]
 position = Vector2(630, 308)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 2780.0
+offset_bottom = 1476.0
+color = Color(0, 0, 0, 1)
