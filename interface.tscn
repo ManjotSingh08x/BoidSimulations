@@ -1,0 +1,176 @@
+[gd_scene load_steps=14 format=3 uid="uid://bdvf0is4uv0ym"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_x526y"]
+[ext_resource type="Script" path="res://slider.gd" id="2_gioq8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n663w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvy3t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkp5c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_54sj6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_14pa2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ciwup"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1el1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6pes"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y5tyg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_enupw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vkuvb"]
+
+[node name="Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 19.0
+offset_right = 2.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x526y")
+metadata/_edit_vertical_guides_ = [50.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -1.0
+offset_top = -18.0
+offset_right = 461.0
+offset_bottom = 245.0
+color = Color(0.215902, 0.215902, 0.215902, 1)
+
+[node name="MouseSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 26.0
+offset_right = 414.0
+offset_bottom = 42.0
+max_value = 500.0
+script = ExtResource("2_gioq8")
+
+[node name="Label" type="Label" parent="MouseSlider"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = -1.0
+text = "Mouse Strength: "
+
+[node name="CohesionSlider" type="HSlider" parent="."]
+offset_left = 51.0
+offset_top = 69.0
+offset_right = 415.0
+offset_bottom = 85.0
+min_value = -50.0
+max_value = 500.0
+script = ExtResource("2_gioq8")
+property = "COHESION_STRENGTH"
+label_text = "Cohesion Strength"
+
+[node name="Label" type="Label" parent="CohesionSlider"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = -1.0
+text = "Mouse Strength: "
+
+[node name="FlowSlider" type="HSlider" parent="."]
+offset_left = 50.0
+offset_top = 114.0
+offset_right = 414.0
+offset_bottom = 130.0
+min_value = -100.0
+max_value = 500.0
+script = ExtResource("2_gioq8")
+property = "FLOW_STRENGTH"
+label_text = "Flow Strength"
+
+[node name="Label" type="Label" parent="FlowSlider"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = -1.0
+text = "Mouse Strength: "
+
+[node name="AlignSlider" type="HSlider" parent="."]
+offset_left = 50.0
+offset_top = 159.0
+offset_right = 414.0
+offset_bottom = 175.0
+max_value = 10.0
+script = ExtResource("2_gioq8")
+property = "ALIGN_STRENGTH"
+label_text = "Align Strength"
+
+[node name="Label" type="Label" parent="AlignSlider"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = -1.0
+text = "Mouse Strength: "
+
+[node name="SeperationSlider" type="HSlider" parent="."]
+offset_left = 51.0
+offset_top = 197.0
+offset_right = 415.0
+offset_bottom = 213.0
+max_value = 10000.0
+script = ExtResource("2_gioq8")
+property = "SEPERATION_STR"
+label_text = "Seperation Strength"
+
+[node name="Label" type="Label" parent="SeperationSlider"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -24.0
+offset_right = 88.0
+offset_bottom = -1.0
+text = "Mouse Strength: "
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = -13.0
+offset_right = 426.0
+offset_bottom = 18.0
+scale = Vector2(1.42124, 1.48233)
+theme_override_font_sizes/font_size = 13
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n663w")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_mvy3t")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pkp5c")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_54sj6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_14pa2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ciwup")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1el1r")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_e6pes")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y5tyg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_enupw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vkuvb")
+action_mode = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = -3.0
+offset_right = 390.0
+offset_bottom = 20.0
+text = "Follow Mouse"
+
+[connection signal="drag_ended" from="MouseSlider" to="MouseSlider" method="_on_drag_ended"]
+[connection signal="drag_ended" from="CohesionSlider" to="CohesionSlider" method="_on_drag_ended"]
+[connection signal="drag_ended" from="FlowSlider" to="FlowSlider" method="_on_drag_ended"]
+[connection signal="drag_ended" from="AlignSlider" to="AlignSlider" method="_on_drag_ended"]
+[connection signal="drag_ended" from="SeperationSlider" to="SeperationSlider" method="_on_drag_ended"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]

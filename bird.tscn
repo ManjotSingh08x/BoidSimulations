@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://bird.gd" id="1_d8d7q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dbcl5"]
-radius = 160.05
+radius = 65.0077
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4vgy7"]
-radius = 16.7631
+radius = 9.0
 
 [node name="RigidBody2D" type="RigidBody2D"]
 gravity_scale = 0.0

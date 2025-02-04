@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dna1wba0c4bi4"]
+[gd_scene load_steps=4 format=3 uid="uid://dna1wba0c4bi4"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_qkhu1"]
 [ext_resource type="PackedScene" uid="uid://dwko0i8gbwys4" path="res://bird.tscn" id="2_wk6sg"]
+[ext_resource type="PackedScene" uid="uid://bdvf0is4uv0ym" path="res://interface.tscn" id="3_ls8u3"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_qkhu1")
@@ -14,3 +15,14 @@ z_index = -1
 offset_right = 2780.0
 offset_bottom = 1476.0
 color = Color(0, 0, 0, 1)
+
+[node name="Interface" parent="." instance=ExtResource("3_ls8u3")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 9.0
+offset_top = 27.0
+offset_right = 9.0
+offset_bottom = 27.0
+grow_horizontal = 1
+grow_vertical = 1

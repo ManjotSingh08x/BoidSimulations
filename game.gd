@@ -24,4 +24,10 @@ func spawn_birds(count: int):
 	for bird in birds:
 		bird._set_bird_properties(birds)
 		
+func _input(event: InputEvent) -> void:
+	if settings.toggle:
+		if event is InputEventMouse and event.is_action_pressed("toggle follow"):
+			settings.follow_mouse = true
+		if event is InputEventMouse and event.is_action_released("toggle follow"):
+			settings.follow_mouse = false
 		
