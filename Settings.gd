@@ -1,5 +1,5 @@
 extends Node2D
-@export var SPEED:int = 200
+@export var SPEED:int = 300
 @export var MOUSE_STRENGTH: int = 300
 @export var COHESION_STRENGTH: int = 100
 @export var FLOW_STRENGTH: int = 50

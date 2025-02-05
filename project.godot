@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 settings="*res://Settings.gd"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/Manjot Singh/Downloads/boid_simualtion_movie.avi"
+
 [input]
 
 "toggle follow"={
