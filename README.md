@@ -16,8 +16,10 @@ Demo showing all features one by one
 https://github.com/user-attachments/assets/00e04f9d-ada3-49da-a2d3-a0d698409671
 
 
-## Usage
-I have added a release file for windows binary that can be run to play the game. working on adding support for other architectures.
+## Installation Instructions
+
+For detailed installation steps, visit the [Releases Page](https://github.com/ManjotSingh08x/BoidSimulations/releases).
+
 
 You can also clone this repo and add it as a project in godot and tweak the parameters.
 
